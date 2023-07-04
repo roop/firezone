@@ -49,10 +49,10 @@ jobs:
       # If we don't do this here, our cache action will compute a cache key based on the Rust version shipped on GitHub's runner which might differ from the one we use.
       - run: rustup show
 
-      # - uses: Swatinem/rust-cache@v2
-      #   with:
-      #     workspaces: ./rust
-      #     key: v2
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ./rust
+          key: v2
 
       # TODO: Building *ring* from git requires us to install additional tools;
       # once we're not using a forked *ring* these 2 steps can be removed.
